@@ -6,7 +6,8 @@ import {
     Text,
     TouchableOpacity,
     Image,
-    Animated
+    Animated,
+    Platform
 } from "react-native";
 import { isIphoneX } from 'react-native-iphone-x-helper'
 
@@ -81,7 +82,7 @@ const Restaurant = ({ route, navigation }) => {
 
     function renderHeader() {
         return (
-            <View style={{ flexDirection: 'row' }}>
+            <View style={{ flexDirection: 'row',marginTop:Platform.OS === "web"?0:30  }}>
                 <TouchableOpacity
                     style={{
                         width: 50,
